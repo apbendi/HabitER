@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AEBA9F029AF31AB4593F1A06 /* libPods-HabitERTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3B4A37FF9400C8378DD560 /* libPods-HabitERTests.a */; };
+		B4C121901A6DF72C00490A45 /* HERViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1218F1A6DF72C00490A45 /* HERViewControllerTests.m */; };
 		B4D509EC1A6DF200008582AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D509EB1A6DF200008582AC /* main.m */; };
 		B4D509EF1A6DF200008582AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D509EE1A6DF200008582AC /* AppDelegate.m */; };
 		B4D509F21A6DF200008582AC /* HERViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D509F11A6DF200008582AC /* HERViewController.m */; };
@@ -34,6 +35,7 @@
 		3222989E7AE4BC8540610DFB /* Pods-HabitER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HabitER/Pods-HabitER.debug.xcconfig"; sourceTree = "<group>"; };
 		7B23624FBF8AAC40F04C535A /* libPods-HabitER.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HabitER.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4823E501A6DF4F1000496D5 /* HERAuthData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HERAuthData.h; sourceTree = "<group>"; };
+		B4C1218F1A6DF72C00490A45 /* HERViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HERViewControllerTests.m; sourceTree = "<group>"; };
 		B4D509E61A6DF200008582AC /* HabitER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D509EA1A6DF200008582AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4D509EB1A6DF200008582AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		B4D50A021A6DF201008582AC /* HabitERTests */ = {
 			isa = PBXGroup;
 			children = (
+				B4C1218F1A6DF72C00490A45 /* HERViewControllerTests.m */,
 				B4D50A051A6DF201008582AC /* HabitERTests.m */,
 				B4D50A031A6DF201008582AC /* Supporting Files */,
 			);
@@ -330,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C121901A6DF72C00490A45 /* HERViewControllerTests.m in Sources */,
 				B4D50A061A6DF201008582AC /* HabitERTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
