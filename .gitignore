@@ -3,3 +3,4 @@ build/
 *.pbxuser
 xcuserdata/
 Pods
+HERAuthData.h
