@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HERViewController : UIViewController
+@interface HERViewController : UITableViewController
 
 
 @end
