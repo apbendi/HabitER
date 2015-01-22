@@ -9,13 +9,25 @@
 #import <AFNetworking/AFNetworking.h>
 
 #import "HERViewController.h"
-#import "HERAuthData.h"
+#import "HERTasksController.h"
 
 @interface HERViewController ()
 @property NSArray *loadedData;
+@property (nonatomic) HERTasksController *tasksController;
 @end
 
 @implementation HERViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+
+    if (self) {
+        self.tasksController = [[HERTasksController alloc] init];
+    }
+
+    return nil;
+}
 
 - (void)viewDidLoad
 {
@@ -31,22 +43,7 @@
 
 - (void)loadData
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    [manager.requestSerializer setValue:HABITRPG_USER_ID forHTTPHeaderField:@"x-api-user"];
-    [manager.requestSerializer setValue:HABITRPG_API_TOKEN forHTTPHeaderField:@"x-api-key"];
 
-
-    [manager GET:@"https://habitrpg.com/api/v2/user/tasks" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
-        //NSLog(@"JSON: %@", responseObject);
-        //NSLog(@"First: %@", responseObject[0][@"text"]);
-        self.loadedData = responseObject;
-        NSLog(@"Loaded Data: %@", self.loadedData);
-
-        [self.tableView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error loading: %@", error);
-    }];
 }
 
 #pragma mark - Table view data source
