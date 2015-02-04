@@ -12,20 +12,32 @@
 #import "HERTask.h"
 #import "HERTasksViewModel.h"
 
+@interface HERAPIController ()
+@property (nonatomic) AFHTTPRequestOperationManager *manager;
+@end
+
 @implementation HERAPIController
+
+- (id)init
+{
+    self = [super init];
+    if (!self) return nil;
+
+    self.manager = [AFHTTPRequestOperationManager manager];
+
+    self.manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [self.manager.requestSerializer setValue:HABITRPG_USER_ID forHTTPHeaderField:@"x-api-user"];
+    [self.manager.requestSerializer setValue:HABITRPG_API_TOKEN forHTTPHeaderField:@"x-api-key"];
+
+    return self;
+}
 
 - (void)fetchTasksWithCompletion:(HERAPITasksCompletionBlock)block
 {
     // blows up in debug build
     NSParameterAssert(block);
 
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    [manager.requestSerializer setValue:HABITRPG_USER_ID forHTTPHeaderField:@"x-api-user"];
-    [manager.requestSerializer setValue:HABITRPG_API_TOKEN forHTTPHeaderField:@"x-api-key"];
-
-
-    [manager GET:@"https://habitrpg.com/api/v2/user/tasks" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
+    [self.manager GET:@"https://habitrpg.com/api/v2/user/tasks" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
         // TODO: checkout RXCollections
 
         NSMutableArray *tasks = [NSMutableArray array];
@@ -37,6 +49,19 @@
 
 
         block([tasks copy]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+}
+
+- (void)completeTask:(HERTask *)task withCompletion:(HERAPITaskCompletionBlock)block
+{
+    NSString *path = [NSString stringWithFormat:@"https://habitrpg.com/api/v2/user/tasks/%@", task.ID];
+    NSDictionary *parameters = @{ @"completed": [NSNumber numberWithBool:YES] };
+
+    [self.manager PUT:path parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        HERTask *task = [HERTask taskWithJSON:responseObject];
+        block(task);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];

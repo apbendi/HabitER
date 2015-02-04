@@ -20,6 +20,11 @@ typedef NS_ENUM(NSUInteger, HERTaskType) {
 
 @property (nonatomic, copy, readonly) NSString *text;
 @property (nonatomic, readonly) HERTaskType type;
+@property (nonatomic, readonly) NSString *ID;
+@property (nonatomic, readonly) BOOL canUpvote;
+@property (nonatomic, readonly) BOOL canDownvote;
+@property (nonatomic, readonly) BOOL canComplete;
+@property (nonatomic, readonly) BOOL isCompleted;
 
 
 + (HERTask *)taskWithJSON:(NSDictionary *)json;

@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@class HERTaskCellViewModel;
 
 @interface HERTasksViewModel : NSObject
 
 - (id)initWithTasks:(NSArray *)tasks;
+- (HERTaskCellViewModel *)taskCellViewModelForIndexPath:(NSIndexPath *)indexPath;
+
 @property (nonatomic, readonly) NSInteger numberOfTasks;
 
 @end

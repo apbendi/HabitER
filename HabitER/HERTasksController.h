@@ -13,5 +13,6 @@
 
 @property (nonatomic, readonly) HERTasksViewModel *viewModel;
 - (void)loadTasks;
+- (void)markTaskCompleteAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

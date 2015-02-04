@@ -10,14 +10,14 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 
-#import "HERViewController.h"
+#import "HERTasksViewController.h"
 
-@interface HERViewController (Tests)
+@interface HERTasksViewController (Tests)
 - (void)loadData;
 @end
 
 @interface HERViewControllerTests : XCTestCase
-@property HERViewController *vc;
+@property HERTasksViewController *vc;
 @property id vcMock;
 @end
 

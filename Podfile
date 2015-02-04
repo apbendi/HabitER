@@ -3,7 +3,7 @@ platform :ios, '8.0'
 
 target 'HabitER' do
 pod "AFNetworking", "~> 2.0"
-pod "KVOController", "~> 1.0.3"
+pod "KVOController", :git => 'https://github.com/facebook/KVOController.git'
 end
 
 target 'HabitERTests', :exclusive => true do

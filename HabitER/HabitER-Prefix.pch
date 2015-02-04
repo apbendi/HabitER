@@ -1,0 +1,18 @@
+//
+//  HabitER-Prefix.pch
+//  HabitER
+//
+//  Created by Ben DiFrancesco on 1/22/15.
+//  Copyright (c) 2015 Ben DiFrancesco. All rights reserved.
+//
+
+#ifndef HabitER_HabitER_Prefix_pch
+#define HabitER_HabitER_Prefix_pch
+
+@import Foundation;
+@import UIKit;
+
+#import <KVOController/FBKVOController.h>
+#import <KVOController/NSObject+FBKVOController.h>
+
+#endif

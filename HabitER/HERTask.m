@@ -11,6 +11,11 @@
 @interface HERTask ()
 @property (nonatomic, copy, readwrite) NSString *text;
 @property (nonatomic, readwrite) HERTaskType type;
+@property (nonatomic, readwrite) NSString *ID;
+@property (nonatomic, readwrite) BOOL canUpvote;
+@property (nonatomic, readwrite) BOOL canDownvote;
+@property (nonatomic, readwrite) BOOL canComplete;
+@property (nonatomic, readwrite) BOOL isCompleted;
 @end
 
 @implementation HERTask
@@ -21,6 +26,11 @@
 
     task.text = json[@"text"];
     task.type = [self typeWithString:json[@"type"]];
+    task.ID = json[@"id"];
+    task.canUpvote = [json.allKeys containsObject:@"up"] && [json[@"up"] boolValue];
+    task.canDownvote = [json.allKeys containsObject:@"down"] && [json[@"down"] boolValue];
+    task.canComplete = [json.allKeys containsObject:@"completed"];
+    task.isCompleted = task.canComplete && [json[@"completed"] boolValue];
 
     return task;
 }

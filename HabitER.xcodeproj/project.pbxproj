@@ -13,10 +13,12 @@
 		B432AC921A71675F00D455A7 /* HERTasksController.m in Sources */ = {isa = PBXBuildFile; fileRef = B432AC911A71675F00D455A7 /* HERTasksController.m */; };
 		B432AC951A716CD100D455A7 /* HERAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = B432AC941A716CD100D455A7 /* HERAPIController.m */; };
 		B432AC981A716FD600D455A7 /* HERTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B432AC971A716FD600D455A7 /* HERTask.m */; };
+		B48DDCDB1A717FBE00828957 /* HERTaskCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B48DDCDA1A717FBE00828957 /* HERTaskCellViewModel.m */; };
+		B48DDCDE1A718E0A00828957 /* HERTaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48DDCDD1A718E0A00828957 /* HERTaskTableViewCell.m */; };
 		B4C121901A6DF72C00490A45 /* HERViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C1218F1A6DF72C00490A45 /* HERViewControllerTests.m */; };
 		B4D509EC1A6DF200008582AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D509EB1A6DF200008582AC /* main.m */; };
 		B4D509EF1A6DF200008582AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D509EE1A6DF200008582AC /* AppDelegate.m */; };
-		B4D509F21A6DF200008582AC /* HERViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D509F11A6DF200008582AC /* HERViewController.m */; };
+		B4D509F21A6DF200008582AC /* HERTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D509F11A6DF200008582AC /* HERTasksViewController.m */; };
 		B4D509F51A6DF200008582AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D509F31A6DF200008582AC /* Main.storyboard */; };
 		B4D509F71A6DF200008582AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4D509F61A6DF200008582AC /* Images.xcassets */; };
 		B4D509FA1A6DF200008582AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D509F81A6DF200008582AC /* LaunchScreen.xib */; };
@@ -48,15 +50,20 @@
 		B432AC941A716CD100D455A7 /* HERAPIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HERAPIController.m; sourceTree = "<group>"; };
 		B432AC961A716FD600D455A7 /* HERTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HERTask.h; sourceTree = "<group>"; };
 		B432AC971A716FD600D455A7 /* HERTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HERTask.m; sourceTree = "<group>"; };
+		B432AC991A71774900D455A7 /* HabitER-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HabitER-Prefix.pch"; sourceTree = "<group>"; };
 		B4823E501A6DF4F1000496D5 /* HERAuthData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HERAuthData.h; sourceTree = "<group>"; };
+		B48DDCD91A717FBE00828957 /* HERTaskCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HERTaskCellViewModel.h; sourceTree = "<group>"; };
+		B48DDCDA1A717FBE00828957 /* HERTaskCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HERTaskCellViewModel.m; sourceTree = "<group>"; };
+		B48DDCDC1A718E0A00828957 /* HERTaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HERTaskTableViewCell.h; sourceTree = "<group>"; };
+		B48DDCDD1A718E0A00828957 /* HERTaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HERTaskTableViewCell.m; sourceTree = "<group>"; };
 		B4C1218F1A6DF72C00490A45 /* HERViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HERViewControllerTests.m; sourceTree = "<group>"; };
 		B4D509E61A6DF200008582AC /* HabitER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D509EA1A6DF200008582AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4D509EB1A6DF200008582AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4D509ED1A6DF200008582AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4D509EE1A6DF200008582AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B4D509F01A6DF200008582AC /* HERViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HERViewController.h; sourceTree = "<group>"; };
-		B4D509F11A6DF200008582AC /* HERViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HERViewController.m; sourceTree = "<group>"; };
+		B4D509F01A6DF200008582AC /* HERTasksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HERTasksViewController.h; sourceTree = "<group>"; };
+		B4D509F11A6DF200008582AC /* HERTasksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HERTasksViewController.m; sourceTree = "<group>"; };
 		B4D509F41A6DF200008582AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4D509F61A6DF200008582AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B4D509F91A6DF200008582AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -123,14 +130,18 @@
 			children = (
 				B4D509ED1A6DF200008582AC /* AppDelegate.h */,
 				B4D509EE1A6DF200008582AC /* AppDelegate.m */,
-				B4D509F01A6DF200008582AC /* HERViewController.h */,
-				B4D509F11A6DF200008582AC /* HERViewController.m */,
+				B4D509F01A6DF200008582AC /* HERTasksViewController.h */,
+				B4D509F11A6DF200008582AC /* HERTasksViewController.m */,
 				B432AC901A71675F00D455A7 /* HERTasksController.h */,
 				B432AC911A71675F00D455A7 /* HERTasksController.m */,
 				B432AC8D1A7164C600D455A7 /* HERTasksViewModel.h */,
 				B432AC8E1A7164C600D455A7 /* HERTasksViewModel.m */,
 				B432AC931A716CD100D455A7 /* HERAPIController.h */,
 				B432AC941A716CD100D455A7 /* HERAPIController.m */,
+				B48DDCD91A717FBE00828957 /* HERTaskCellViewModel.h */,
+				B48DDCDA1A717FBE00828957 /* HERTaskCellViewModel.m */,
+				B48DDCDC1A718E0A00828957 /* HERTaskTableViewCell.h */,
+				B48DDCDD1A718E0A00828957 /* HERTaskTableViewCell.m */,
 				B432AC961A716FD600D455A7 /* HERTask.h */,
 				B432AC971A716FD600D455A7 /* HERTask.m */,
 				B4D509F31A6DF200008582AC /* Main.storyboard */,
@@ -147,6 +158,7 @@
 				B4823E501A6DF4F1000496D5 /* HERAuthData.h */,
 				B4D509EA1A6DF200008582AC /* Info.plist */,
 				B4D509EB1A6DF200008582AC /* main.m */,
+				B432AC991A71774900D455A7 /* HabitER-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -346,13 +358,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4D509F21A6DF200008582AC /* HERViewController.m in Sources */,
+				B4D509F21A6DF200008582AC /* HERTasksViewController.m in Sources */,
 				B432AC921A71675F00D455A7 /* HERTasksController.m in Sources */,
 				B432AC981A716FD600D455A7 /* HERTask.m in Sources */,
 				B4D509EF1A6DF200008582AC /* AppDelegate.m in Sources */,
 				B4D509EC1A6DF200008582AC /* main.m in Sources */,
+				B48DDCDE1A718E0A00828957 /* HERTaskTableViewCell.m in Sources */,
 				B432AC951A716CD100D455A7 /* HERAPIController.m in Sources */,
 				B432AC8F1A7164C600D455A7 /* HERTasksViewModel.m in Sources */,
+				B48DDCDB1A717FBE00828957 /* HERTaskCellViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +491,7 @@
 			baseConfigurationReference = 3222989E7AE4BC8540610DFB /* Pods-HabitER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HabitER/HabitER-Prefix.pch";
 				INFOPLIST_FILE = HabitER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -488,6 +503,7 @@
 			baseConfigurationReference = EE561BDCE6275DC2A4BC2C45 /* Pods-HabitER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HabitER/HabitER-Prefix.pch";
 				INFOPLIST_FILE = HabitER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
